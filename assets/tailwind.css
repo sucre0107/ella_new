@@ -661,15 +661,6 @@ video {
   border-width: 1px;
 }
 
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -680,10 +671,6 @@ video {
 
 .text-right {
   text-align: right;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 .uppercase {
@@ -700,11 +687,6 @@ video {
 
 .italic {
   font-style: italic;
-}
-
-.text-red-700 {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
 .underline {
