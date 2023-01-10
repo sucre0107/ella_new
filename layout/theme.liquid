@@ -37,6 +37,7 @@
         {% render 'variable' %}
 
         {{ 'base.css' | asset_url | stylesheet_tag }}
+        {{ 'tailwind.css' | asset_url | stylesheet_tag }}
 
         {%- if settings.use_custom_css -%}
             {{ 'custom.css' | asset_url | stylesheet_tag }}
