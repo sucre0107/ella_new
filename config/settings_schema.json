@@ -9,31 +9,38 @@
     },
     {
         "name": "t:settings_schema.multiple_layouts.name",
+        "name": "多种布局设置",
         "settings": [
             {
                 "type": "header",
-                "content": "t:settings_schema.multiple_layouts.settings.general.header"
+                "content": "t:settings_schema.multiple_layouts.settings.general.header",
+                "content": "网页header部分"
             },
             {
                 "type": "radio",
                 "id": "layout_header",
                 "label": "t:settings_schema.multiple_layouts.settings.general.header_layout",
+                "label": "header的宽度设置",
                 "options": [
                     {
                         "value": "default",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.default"
+                        "label": "t:settings_schema.multiple_layouts.settings.general.default",
+                        "label": "默认宽度"
                     },
                     {
                         "value": "full",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.full_width"
+                        "label": "t:settings_schema.multiple_layouts.settings.general.full_width",
+                        "label": "全屏宽度"
                     },
                     {
                         "value": "boxed",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.boxed"
+                        "label": "t:settings_schema.multiple_layouts.settings.general.boxed",
+                        "label": "固定宽度:1370"
                     },
                     {
                         "value": "custom_width",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.custom_width"
+                        "label": "t:settings_schema.multiple_layouts.settings.general.custom_width",
+                        "label": "自定义宽度"
                     }
                 ],
                 "default": "default"
@@ -42,6 +49,7 @@
                 "type": "range",
                 "id": "header_custom_width_size",
                 "label": "t:settings_schema.multiple_layouts.settings.general.custom_width_2",
+                "label": "自定义宽度：（1200-1920）",
                 "max": 1920,
                 "min": 1200,
                 "step": 10,
@@ -50,29 +58,35 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.multiple_layouts.settings.general.body"
+                "content": "t:settings_schema.multiple_layouts.settings.general.body",
+                "content": "网页body部分"
             },
             {
                 "type": "radio",
                 "id": "layout_body",
                 "label": "t:settings_schema.multiple_layouts.settings.general.body_layout",
+                "label": "body的宽度设置",
                 "options": [
-                    {
-                        "value": "default",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.default"
-                    },
-                    {
-                        "value": "full",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.full_width"
-                    },
-                    {
-                        "value": "boxed",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.boxed"
-                    },
-                    {
-                        "value": "custom_width",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.custom_width"
-                    }
+                  {
+                      "value": "default",
+                      "label": "t:settings_schema.multiple_layouts.settings.general.default",
+                      "label": "默认宽度"
+                  },
+                  {
+                      "value": "full",
+                      "label": "t:settings_schema.multiple_layouts.settings.general.full_width",
+                      "label": "全屏宽度"
+                  },
+                  {
+                      "value": "boxed",
+                      "label": "t:settings_schema.multiple_layouts.settings.general.boxed",
+                      "label": "固定宽度:1370"
+                  },
+                  {
+                      "value": "custom_width",
+                      "label": "t:settings_schema.multiple_layouts.settings.general.custom_width",
+                      "label": "自定义宽度"
+                  }
                 ],
                 "default": "default"
             },
@@ -80,6 +94,7 @@
                 "type": "range",
                 "id": "body_custom_width_size",
                 "label": "t:settings_schema.multiple_layouts.settings.general.custom_width_2",
+                "label": "自定义宽度：（1200-1920）",
                 "max": 1920,
                 "min": 1200,
                 "step": 10,
@@ -88,29 +103,35 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.multiple_layouts.settings.general.footer"
+                "content": "t:settings_schema.multiple_layouts.settings.general.footer",
+                "content": "网页footer部分"
+  
             },
             {
                 "type": "radio",
                 "id": "layout_footer",
                 "label": "t:settings_schema.multiple_layouts.settings.general.footer_layout",
                 "options": [
-                    {
-                        "value": "default",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.default"
-                    },
-                    {
-                        "value": "full",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.full_width"
-                    },
-                    {
-                        "value": "boxed",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.boxed"
-                    },
-                    {
-                        "value": "custom_width",
-                        "label": "t:settings_schema.multiple_layouts.settings.general.custom_width"
-                    }
+                  {
+                      "value": "default",
+                      "label": "t:settings_schema.multiple_layouts.settings.general.default",
+                      "label": "默认宽度"
+                  },
+                  {
+                      "value": "full",
+                      "label": "t:settings_schema.multiple_layouts.settings.general.full_width",
+                      "label": "全屏宽度"
+                  },
+                  {
+                      "value": "boxed",
+                      "label": "t:settings_schema.multiple_layouts.settings.general.boxed",
+                      "label": "固定宽度:1370"
+                  },
+                  {
+                      "value": "custom_width",
+                      "label": "t:settings_schema.multiple_layouts.settings.general.custom_width",
+                      "label": "自定义宽度"
+                  }
                 ],
                 "default": "default"
             },
@@ -118,6 +139,7 @@
                 "type": "range",
                 "id": "footer_custom_width_size",
                 "label": "t:settings_schema.multiple_layouts.settings.general.custom_width_2",
+                "label": "自定义宽度：（1200-1920）",
                 "max": 1920,
                 "min": 1200,
                 "step": 10,
@@ -138,47 +160,57 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.multiple_layouts.settings.general.layout_boxed"
+                "content": "t:settings_schema.multiple_layouts.settings.general.layout_boxed",
+                "content": "网页元素为固定宽度时，背景设置"
+
             },
             {
                 "type": "color",
                 "id": "bg_color_layout_boxed",
                 "label": "t:settings_schema.colors.settings.colors_name.background_color",
+                "label": "请选择颜色",
                 "default": "#f8f8f8"
             },
             {
                 "type": "image_picker",
                 "id": "bg_image_layout_boxed",
-                "label": "t:settings_schema.multiple_layouts.settings.general.select_image_background"
+                "label": "t:settings_schema.multiple_layouts.settings.general.select_image_background",
+                "label": "请选竖向条幅的图像（不带链接）"
             },
             {
                 "type": "image_picker",
                 "id": "banner_adv_left",
-                "label": "t:settings_schema.multiple_layouts.settings.general.select_banner_left"
+                "label": "t:settings_schema.multiple_layouts.settings.general.select_banner_left",
+                "label": "请选左侧竖向条幅的图像（带链接）"
             },
             {
                 "type": "url",
                 "id": "link_left",
-                "label": "t:settings_schema.multiple_layouts.settings.general.link_banner_left"
+                "label": "t:settings_schema.multiple_layouts.settings.general.link_banner_left",
+                "label": "请选择左侧图像指向的链接"
             },
             {
                 "type": "image_picker",
                 "id": "banner_adv_right",
-                "label": "t:settings_schema.multiple_layouts.settings.general.select_banner_right"
+                "label": "t:settings_schema.multiple_layouts.settings.general.select_banner_right",
+                "label": "请选右侧竖向条幅的图像（带链接）"
             },
             {
                 "type": "url",
                 "id": "link_right",
-                "label": "t:settings_schema.multiple_layouts.settings.general.link_banner_right"
+                "label": "t:settings_schema.multiple_layouts.settings.general.link_banner_right",
+                "label": "请选择左侧图像指向的链接"
             },
             {
                 "type": "header",
-                "content": "t:sections.header.settings.header__3.content"
+                "content": "t:sections.header.settings.header__3.content",
+                "content": "移动端的header设置"
             },
             {
                 "type": "select",
                 "id": "header_mobile_layout",
                 "label": "t:sections.header.settings.header_mobile.label__1",
+                "label": "请选择布局",
                 "default": "01",
                 "options": [
                     {
@@ -193,12 +225,14 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.multiple_layouts.settings.general.mobile_menu_content"
+                "content": "t:settings_schema.multiple_layouts.settings.general.mobile_menu_content",
+                "content": "移动端按钮的布局"
             },
             {
                 "type": "select",
                 "id": "mobile_menu",
                 "label": "t:settings_schema.multiple_layouts.settings.general.mobile_menu_label",
+                "label": "请选择布局",
                 "options": [
                     {
                         "value": "default",
@@ -213,12 +247,14 @@
             },
             {
                 "type": "header",
-                "content": "t:sections.header.settings.header_layout.content"
+                "content": "t:sections.header.settings.header_layout.content",
+                "content": "桌面端的header设置"
             },
             {
                 "type": "select",
                 "id": "header_layout",
                 "label": "t:sections.header.settings.header_layout.layout",
+                "label": "请选择布局",
                 "options": [
                     {
                         "value": "01",
@@ -269,23 +305,27 @@
                         "label": "t:sections.header.settings.header_layout.label__12"
                     }
                 ],
-                "default": "01"
+                "default": "04"
             },
             {
                 "type": "checkbox",
                 "id": "enable_tab_categories",
                 "label": "t:sections.header.settings.header_layout.enable_tab_categories",
+                "label": "移动端是否激活“Tab Categories的设置",
                 "info": "t:sections.header.settings.header_layout.info_tab_categories",
+                "info": "只对Header 04的布局“生效”",
                 "default": true
             },
             {
                 "type": "header",
-                "content": "t:sections.footer.settings.footer_layout.content"
+                "content": "t:sections.footer.settings.footer_layout.content",
+                "content": "Footer布局"
             },
             {
                 "type": "select",
                 "id": "footer_layout",
                 "label": "t:sections.footer.settings.footer_layout.layout",
+                "label": "请选择布局",
                 "options": [
                     {
                         "value": "01",
@@ -308,12 +348,14 @@
             },
             {
                 "type": "header",
-                "content": "t:sections.header.settings.collections_layout.layout"
+                "content": "t:sections.header.settings.collections_layout.layout",
+                "content": "产品系列-collections-布局"
             },
             {
                 "type": "select",
                 "id": "collection_layout",
                 "label": "t:settings_schema.multiple_layouts.settings.general.layout",
+                "label": "请选择布局",
                 "default": "default",
                 "options": [
                     {
@@ -344,12 +386,14 @@
             },
             {
                 "type": "header",
-                "content": "t:sections.header.settings.list_collections_layout.layout"
+                "content": "t:sections.header.settings.list_collections_layout.layout",
+                "content": "产品系列列表-list-collection-布局"
             },
             {
                 "type": "select",
                 "id": "list_collections_layout",
                 "label": "t:settings_schema.multiple_layouts.settings.general.layout",
+                "label": "请选择布局",
                 "options": [
                     {
                         "value": "collections_01_grid",
@@ -376,12 +420,14 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.multiple_layouts.settings.general.product_page_layout"
+                "content": "t:settings_schema.multiple_layouts.settings.general.product_page_layout",
+                "content": "产品-product-布局"
             },
             {
                 "type": "select",
                 "id": "product_page_layout",
                 "label": "t:settings_schema.multiple_layouts.settings.general.layout",
+                "label": "请选择布局",
                 "default": "default",
                 "options": [
                     {
@@ -420,12 +466,14 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.multiple_layouts.settings.general.blog_layout"
+                "content": "t:settings_schema.multiple_layouts.settings.general.blog_layout",
+                "content": "博客汇总-blogs-布局"
             },
             {
                 "type": "select",
                 "id": "blog_layout",
                 "label": "t:settings_schema.multiple_layouts.settings.general.layout",
+                "label": "请选择布局",
                 "default": "default",
                 "options": [
                     {
@@ -452,12 +500,15 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.multiple_layouts.settings.general.password_layout"
+                "content": "t:settings_schema.multiple_layouts.settings.general.password_layout",
+                "content": "password布局",
+                "info": "还不清楚咋用"
             },
             {
                 "type": "select",
                 "id": "password_layout",
                 "label": "t:settings_schema.multiple_layouts.settings.general.layout",
+                "label": "请选择布局",
                 "default": "01",
                 "options": [
                     {
@@ -474,10 +525,12 @@
     },
     {
         "name": "t:settings_schema.typography.name",
+        "name": "字体设置",
         "settings": [
             {
                 "type": "header",
-                "content": "t:settings_schema.typography.settings.font_family__1.content"
+                "content": "t:settings_schema.typography.settings.font_family__1.content",
+                "info": "设置好字体家族以供网页元素选择使用"
             },
             {
                 "type": "select",
@@ -494,6 +547,7 @@
                     }
                 ],
                 "info": "t:settings_schema.typography.settings.font_type.info",
+                "info": "http://www.google.com/fonts 复制网址可下载字体",
                 "default": "google_fonts"
             },
             {
@@ -547,7 +601,8 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.typography.settings.type_body_font.title"
+                "content": "t:settings_schema.typography.settings.type_body_font.title",
+                "content": "Body内的文本字体设置"
             },
             {
                 "type": "select",
@@ -625,7 +680,8 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.typography.settings.type_heading_font.title"
+                "content": "t:settings_schema.typography.settings.type_heading_font.title",
+                "content": "标题字体设置（没搞懂）"
             },
             {
                 "type": "select",
@@ -757,11 +813,13 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.typography.settings.type_navigation_font.title"
+                "content": "t:settings_schema.typography.settings.type_navigation_font.title",
+                "content": "导航栏按钮的字体设置"
             },
             {
                 "type": "paragraph",
-                "content": "t:settings_schema.typography.settings.type_navigation_font.title_menu_lv1"
+                "content": "t:settings_schema.typography.settings.type_navigation_font.title_menu_lv1",
+                "content": "第一级meun的字体设置"
             },
             {
                 "type": "select",
@@ -863,7 +921,8 @@
             },
             {
                 "type": "paragraph",
-                "content": "t:settings_schema.typography.settings.type_navigation_font.title_menu_lv2"
+                "content": "t:settings_schema.typography.settings.type_navigation_font.title_menu_lv2",
+                "content": "第二级menu的字体设置"
             },
             {
                 "type": "select",
@@ -965,7 +1024,9 @@
             },
             {
                 "type": "paragraph",
-                "content": "t:settings_schema.typography.settings.type_navigation_font.title_menu_lv3"
+                "content": "t:settings_schema.typography.settings.type_navigation_font.title_menu_lv3",
+                "content": "第三级menu的字体设置"
+
             },
             {
                 "type": "select",
@@ -1067,7 +1128,8 @@
             },
             {
                 "type": "paragraph",
-                "content": "t:settings_schema.typography.settings.type_navigation_font.title_mega_menu_lv2"
+                "content": "t:settings_schema.typography.settings.type_navigation_font.title_mega_menu_lv2",
+                "content": "二级Mega_menu字体设置 "
             },
             {
                 "type": "select",
@@ -1189,7 +1251,9 @@
             },
             {
                 "type": "paragraph",
-                "content": "t:settings_schema.typography.settings.type_navigation_font.title_mega_menu_lv3"
+                "content": "t:settings_schema.typography.settings.type_navigation_font.title_mega_menu_lv3",
+                "content": "三级Mega_menu字体设置 "
+
             },
             {
                 "type": "select",
@@ -1291,69 +1355,13 @@
             },
             {
                 "type": "header",
-                "content": "t:settings_schema.typography.settings.type_product_item_font.title"
+                "content": "t:settings_schema.typography.settings.type_product_item_font.title",
+                "content": "产品-item的字体设置（产品页面）"
             },
             {
                 "type": "paragraph",
-                "content": "t:settings_schema.typography.settings.type_product_item_font.product_title"
-            },
-            {
-                "type": "select",
-                "id": "product_title_font",
-                "label": "t:settings_schema.typography.settings.font_type.label",
-                "options": [
-                    {
-                        "value": "font_1",
-                        "label": "t:settings_schema.typography.settings.font_family__1.content"
-                    },
-                    {
-                        "value": "font_2",
-                        "label": "t:settings_schema.typography.settings.font_family__2.content"
-                    }
-                ],
-                "default": "font_1"
-            },
-            {
-                "type": "range",
-                "id": "product_title_font_size",
-                "label": "t:settings_schema.product_card.settings.product_title.label__2",
-                "min": 10,
-                "max": 100,
-                "step": 1,
-                "unit": "t:settings_schema.product_card.settings.product_title.unit",
-                "default": 16
-            },
-            {
-                "type": "select",
-                "id": "product_title_font_weight",
-                "label": "t:settings_schema.product_card.settings.product_title.label__3",
-                "default": "400",
-                "options": [
-                    {
-                        "value": "400",
-                        "label": "t:settings_schema.typography.settings.font_weight.options__1"
-                    },
-                    {
-                        "value": "500",
-                        "label": "t:settings_schema.typography.settings.font_weight.options__2"
-                    },
-                    {
-                        "value": "600",
-                        "label": "t:settings_schema.typography.settings.font_weight.options__3"
-                    },
-                    {
-                        "value": "700",
-                        "label": "t:settings_schema.typography.settings.font_weight.options__4"
-                    },
-                    {
-                        "value": "800",
-                        "label": "t:settings_schema.typography.settings.font_weight.options__5"
-                    },
-                    {
-                        "value": "900",
-                        "label": "t:settings_schema.typography.settings.font_weight.options__6"
-                    }
-                ]
+                "content": "t:settings_schema.typography.settings.type_product_item_font.product_title",
+                "content": "产品标题字体设置"
             },
             {
                 "type": "select",
@@ -1380,58 +1388,9 @@
                 ]
             },
             {
-                "type": "range",
-                "id": "product_title_line_height",
-                "min": 1,
-                "max": 100,
-                "step": 1,
-                "unit": "px",
-                "label": "t:settings_schema.typography.settings.typography.label__1",
-                "default": 20
-            },
-            {
-                "type": "text",
-                "id": "product_title_letter_spacing",
-                "label": "t:settings_schema.typography.settings.typography.label__2",
-                "default": ".02em"
-            },
-            {
-                "type": "select",
-                "id": "product_title_line_text",
-                "label": "t:settings_schema.product_card.settings.product_title.label__5",
-                "default": "2",
-                "options": [
-                    {
-                        "value": "1",
-                        "label": "1"
-                    },
-                    {
-                        "value": "2",
-                        "label": "2"
-                    },
-                    {
-                        "value": "3",
-                        "label": "3"
-                    },
-                    {
-                        "value": "full",
-                        "label": "t:settings_schema.product_card.settings.product_title.options__13"
-                    }
-                ]
-            },
-            {
-                "type": "range",
-                "id": "product_title_margin_bottom",
-                "label": "t:settings_schema.product_card.settings.product_title.label__8",
-                "min": 0,
-                "max": 100,
-                "step": 1,
-                "unit": "t:settings_schema.product_card.settings.product_title.unit",
-                "default": 10
-            },
-            {
                 "type": "paragraph",
-                "content": "t:settings_schema.typography.settings.type_product_item_font.product_vendor"
+                "content": "t:settings_schema.typography.settings.type_product_item_font.product_vendor",
+                "content": "产品制造商字体设置"
             },
             {
                 "type": "select",
@@ -1563,7 +1522,8 @@
             },
             {
                 "type": "paragraph",
-                "content": "t:settings_schema.typography.settings.type_product_item_font.product_price"
+                "content": "t:settings_schema.typography.settings.type_product_item_font.product_price",
+                "content": "产品价格字体设置"
             },
             {
                 "type": "select",
@@ -1661,7 +1621,8 @@
             },
             {
                 "type": "paragraph",
-                "content": "t:settings_schema.typography.settings.type_product_item_font.product_badge"
+                "content": "t:settings_schema.typography.settings.type_product_item_font.product_badge",
+                "content": "product_badge-图片上的sale标志字体设置"
             },
             {
                 "type": "select",
@@ -1803,7 +1764,8 @@
             },
             {
                 "type": "paragraph",
-                "content": "t:settings_schema.typography.settings.type_product_item_font.product_quickview"
+                "content": "t:settings_schema.typography.settings.type_product_item_font.product_quickview",
+                "content": "quickview弹窗的字体设置（没搞明白）"
             },
             {
                 "type": "range",
@@ -9231,4 +9193,4 @@
             }
         ]
     }
-]
+  ]
