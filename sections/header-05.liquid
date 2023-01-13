@@ -1,4 +1,4 @@
-    <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="all" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="all" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="all" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="all" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-megamenu.css' | asset_url }}" media="all" onload="this.media='all'">
@@ -12,6 +12,7 @@
 <noscript>{{ 'component-menu-mobile.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-header-05.css' | asset_url | stylesheet_tag }}</noscript>
 
+
 {% render 'header-05-style' %}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
@@ -24,12 +25,14 @@
                     <div class="header-top--left header__language_currency text-left clearfix">
                         <div class="header-top-right-group header-language_currency">
                             <div class="top-language-currency{% if settings.enable_currencies %} enable-currency{% endif %}">
-                                {% if settings.enable_multilang_shopify %}
-                                    {% render 'halo-top-language' %}
-                                {% endif %}
+                                
 
                                 {% if settings.enable_currencies %}
-                                    {% render 'halo-top-currency' %}
+                                    {% render 'custom-top-currency' %}
+                                {% endif %}
+
+                                {% if settings.enable_multilang_shopify %}
+                                    {% render 'custom-top-language' %}
                                 {% endif %}
                             </div>
                             {% if section.settings.display_customer_service and section.settings.customer_service_text != blank %}
@@ -57,7 +60,7 @@
                                             class="header__heading-logo"
                                             alt="{{ image.alt | default: shop.name | escape }}">
                                     {%- elsif section.settings.logo_text != blank -%}
-                                        <span class="h2 {{ section.settings.logo_text_transform }}">{{ section.settings.logo_text }}</span>
+                                        <span id="svg_or_text_logo" class="h2 {{ section.settings.logo_text_transform }}">{{ section.settings.logo_text }}</span>
                                     {%- else -%}
                                         <span class="h2 {{ section.settings.logo_text_transform }}">{{ shop.name }}</span>
                                     {%- endif -%}
@@ -73,7 +76,7 @@
                                             class="header__heading-logo"
                                             alt="{{ image.alt | default: shop.name | escape }}">
                                     {%- elsif section.settings.logo_text != blank -%}
-                                        <span class="h2 {{ section.settings.logo_text_transform }}">{{ section.settings.logo_text }}</span>
+                                        <span class="pc-logo-color mobile-logo-color h2 {{ section.settings.logo_text_transform }} ">{{ section.settings.logo_text }}</span>
                                     {%- else -%}
                                         <span class="h2 {{ section.settings.logo_text_transform }}">{{ shop.name }}</span>
                                     {%- endif -%}
@@ -99,9 +102,9 @@
                                             {% render 'icon-close' %}
                                         </button>
                                         <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-                                            <div class="field">
+                                            <div class="field relative rounded-lg">
                                                 <input 
-                                                    class="search__input field__input form-input-placeholder" 
+                                                    class="w-96 h-12 focus:outline-none focus:ring focus:border-gray-500 rounded-lg search__input field__input form-input-placeholder"
                                                     id="Search-In-Modal" 
                                                     type="search" 
                                                     name="q" 
@@ -126,7 +129,7 @@
                                                 <label class="field__label hiddenLabels" for="Search-In-Modal">
                                                     {{ 'general.search.search' | t }}
                                                 </label>
-                                                <button class="button search__button field__button focus-inset" aria-label="{{ 'general.search.search' | t }}">
+                                                <button class="absolute h-full w-10 top-0 right-0" aria-label="{{ 'general.search.search' | t }}">
                                                     {% render 'icon-search-03' %}
                                                 </button>
                                             </div>
@@ -138,16 +141,7 @@
                                             {%- endif -%}
                                         </form>
                                     </summary>
-
-                                    <div class="search-modal modal__content{% if settings.show_quick_search %} quickSearch{% endif %}" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
-                                        {%- if settings.show_quick_search -%}
-                                            {% render 'halo-quick-search' %}
-                                        {%- endif -%}
-                                    </div>
                                 </details>
-                                {%- if settings.show_quick_search -%}
-                                    </predictive-search>
-                                {%- endif -%}
                             </details-modal>
                         {% endif %}
 
@@ -160,8 +154,10 @@
                                     {% assign is_contained = false %}
                                 {% endif %}
                                 <div class="header__icon customer-links">
-                                    <a href="{{ routes.account_login_url }}" class="header__icon header__icon--account link link--text"{% if is_contained %} data-open-auth-sidebar{% endif %}>
-                                        {% render 'icon-account-2' %}
+                                    <a href="{{ routes.account_login_url }}" class="header__icon header__icon--account link link--text"{% if is_contained %} data-open-auth-sidebar{% endif %}> 
+                                        <div class="icon ">
+                                            {% render 'icon-account-2' %}
+                                        </div>
                                         <span class="visually-hidden">
                                             {%- liquid
                                             if customer
@@ -511,52 +507,40 @@
         {
             "type": "color",
             "id": "header_top_color",
-            "label": "t:sections.header.settings.header_top.label__2",
+            "label": "文字颜色",
             "default": "#323232"
         },
         {
             "type": "color",
-            "id": "header_top_color_2",
-            "label": "t:sections.header.settings.header_top.label__3",
-            "default": "#232323"
-        },
-        {
-            "type": "color",
             "id": "header_top_bg",
-            "label": "t:settings_schema.colors.settings.colors_name.background_color",
+            "label": "背景颜色",
             "default": "#000000"
         },
         {
             "type": "color_background",
             "id": "header_top_bg_gradient",
-            "label": "t:settings_schema.colors.settings.colors_name.background_color_gradient"
+            "label": "背景渐变色"
         },
         {
             "type": "header",
-            "content": "t:sections.header.settings.header_top.search"
+            "content": "s搜索框颜色"
         },
         {
             "type": "color",
             "id": "bg_search_color",
-            "label": "t:settings_schema.colors.settings.colors_name.background_color",
+            "label": "搜索框背景色",
             "default": "#fafafa"
         },      
         {
             "type": "color",
             "id": "search_color",
-            "label": "t:sections.header.settings.header_top.search_color_text",
-            "default": "#323232"
-        },
-        {
-            "type": "color",
-            "id": "search_icon_color",
-            "label": "t:sections.header.settings.header_top.search_color_icon",
+            "label": "搜索框文字颜色",
             "default": "#323232"
         },
         {
             "type": "color",
             "id": "search_border_color",
-            "label": "t:sections.header.settings.header_top.search_border_color",
+            "label": "搜索框下边框颜色",
             "default": "#e7e7e7"
         },
         {
@@ -566,45 +550,57 @@
         {
             "type": "color",
             "id": "cart_bg_item",
-            "label": "t:sections.header.settings.header_top.background_color_items_cart",
+            "label": "购物车小圆点背景色",
             "default": "#FFE5E8"
         },
         {
             "type": "color",
             "id": "cart_color_item",
-            "label": "t:sections.header.settings.header_top.color_items_cart",
+            "label": "购物车数字颜色",
             "default": "#323232"
         },
         {
             "type": "header",
-            "content": "t:sections.header.settings.header__2.content"
+            "content": "导航栏按钮处"
         },
         {
             "type": "color",
             "id": "header_bottom_bg",
-            "label": "t:settings_schema.colors.settings.colors_name.background_color",
+            "label": "导航栏按钮出横幅背景色",
             "default": "#FFFFFF"
         },
         {
             "type": "color_background",
             "id": "header_bottom_bg_gradient",
-            "label": "t:settings_schema.colors.settings.colors_name.background_color_gradient"
+            "label": "导航栏按钮出横幅背景渐变色"
         },
         {
             "type": "header",
-            "content": "t:sections.header.settings.header__3.content"
+            "content": "移动端的header"
         },
         {
             "type": "color",
             "id": "header_mobile_bg",
-            "label": "t:settings_schema.colors.settings.colors_name.background_color",
+            "label": "横幅背景色",
             "default": "#FFFFFF"
         },
         {
             "type": "color",
             "id": "header_mobile_color",
-            "label": "t:sections.header.settings.header_mobile.label__3",
+            "label": "所有svg的颜色",
             "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "mobile_cart_bg_item",
+            "label": "mobile购物车小圆点背景色",
+            "default": "#FFE5E8"
+        },
+        {
+            "type": "color",
+            "id": "mobile_cart_color_item",
+            "label": "mobile购物车数字颜色",
+            "default": "#323232"
         },
         {
             "type": "range",
@@ -651,6 +647,12 @@
             "default": 90
         },
         {
+            "type": "color",
+            "id": "pc_logo_color",
+            "label": "pc端的svg颜色",
+            "default": "#FFFFFF"
+        },
+        {
             "type": "range",
             "id": "logo_width_mobile",
             "min": 50,
@@ -659,6 +661,12 @@
             "unit": "t:sections.header.settings.logo_width.unit",
             "label": "t:sections.header.settings.logo_width.label__2",
             "default": 50
+        },
+        {
+            "type": "color",
+            "id": "mobile_logo_color",
+            "label": "mobile端的svg颜色",
+            "default": "#000000"
         },
         {
             "type": "range",

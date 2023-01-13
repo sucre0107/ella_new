@@ -217,11 +217,11 @@
 	}
 
 	.header-top--right .header__search .search-modal__form{
-		max-width: 170px;
+		max-width: 100%;
 	}
 
 	.header-top--right .header__search .search-modal__form .search__input{
-		padding-left: 0;
+		padding-left: 10px;
 	}
 
 	.header-top--right .quickSearchResultsWrap{

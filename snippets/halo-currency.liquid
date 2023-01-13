@@ -65,16 +65,20 @@
 		            {% assign currency_length = settings[currency_unit] | size %}
 		            {% capture currency_icon %}i-currency-{{ i }}{% endcapture %}
 			            {% if currency_length > 0 %}
-				            <a class="dropdown-item{% if shop.currency == settings[currency_unit] %} active {% endif %}" href="#" data-currency="{{settings[currency_unit]}}">
+				            <a class="dropdown-item{% if shop.currency == settings[currency_unit] %} active {% endif %}" href="#" data-currency="{{ settings[currency_unit] }}">
 				                <span class="icon">{{ settings[currency_icon] }}</span>
-				                <span class="text">
-				                   {{ settings[currency_unit]}}
-				                </span>
+				                
+								<div class="inline-block md:bg-white md:rounded-xl md:mx-auto">
+									<span class="md:p-2 md:text-black">
+				                   	  {{ settings[currency_unit] }}
+				               		</span>
+								</div>
 				                {% if settings.header_layout == '07' %}
 						            {% render 'icon-sort-down' %}
 						        {% else %}
-						            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 551.13 551.13" height="512" viewBox="0 0 551.13 551.13" width="512"><path d="m275.565 361.679-223.897-223.896h-51.668l275.565 275.565 275.565-275.565h-51.668z"/></svg>
-						        {% endif %}
+						            <svg class="inline-block text-white" xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 551.13 551.13" height="512" viewBox="0 0 551.13 551.13" width="512"><path d="m275.565 361.679-223.897-223.896h-51.668l275.565 275.565 275.565-275.565h-51.668z"/></svg>
+									&nbsp;
+								{% endif %}
 				            </a>
 			            {% endif %}
 		            {% endfor %}

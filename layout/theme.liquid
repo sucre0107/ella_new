@@ -37,7 +37,7 @@
         {% render 'variable' %}
 
         {{ 'base.css' | asset_url | stylesheet_tag }}
-        {{ 'tailwind.css' | asset_url | stylesheet_tag }}
+        
 
         {%- if settings.use_custom_css -%}
             {{ 'custom.css' | asset_url | stylesheet_tag }}
@@ -60,6 +60,7 @@
             <!-- Turf.js plugin -->
             <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
         {% endif %}
+        {{ 'tailwind.css' | asset_url | stylesheet_tag }}
     </head>
 
     {%- liquid

@@ -22,7 +22,7 @@
       <div class="no-js-hidden">
           <div class="disclosure">
               <p class="title" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</p>
-              <ul id="HeaderLanguageList" role="list" class="disclosure__list list-unstyled custom-scrollbar">
+              <ul id="HeaderLanguageList" role="list" class="disclosure__list list-unstyled custom-scrollbar border">
                   {%- for language in localization.available_languages -%}
                     {% assign logo = '' %}
                     {% for i in (1..6) %}
@@ -38,7 +38,7 @@
                         <span class="icon">
                           {{ logo }}
                         </span>
-                        <span class="text">
+                        <span class="text-black w-full">
                           {{ language.iso_code }}
                         </span>
                     </a>

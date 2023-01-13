@@ -141,11 +141,6 @@
         color: {{ az_brand_link_text_color }};
     }
 
-    {% if header_top_color != 'rgba(0,0,0,0)' and header_top_color != blank %}
-        .header__icon .icon{
-            fill: {{ header_top_color_2 }};
-        }
-    {% endif %}
 
     {% if header_bottom_bg != 'rgba(0,0,0,0)' and header_bottom_bg != blank %}
         .header-mobile{
@@ -364,7 +359,9 @@
     /*.header .menu-lv-item.has-megamenu .menu-dropdown{
         display: none;
     }*/
-
+    .header__heading-link .h2 svg {
+            color: {{ section.settings.mobile_logo_color }};
+        }
     @media screen and (max-width: 1024px) {
         {% if section.settings.logo_text != blank %}
             .header-mobile--icon .header__heading-link{
@@ -457,6 +454,13 @@
                 color: {{ logo_color }};
             {% endif %}
         }
+
+        .header__heading .h2 svg {
+            color: {{ section.settings.pc_logo_color }};
+        }
+
+        
+        
 
         {% if section.settings.logo_text != blank %}
             .header-top--center .header__logo .header__heading-link{

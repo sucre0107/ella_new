@@ -305,7 +305,9 @@
         {%- if enable_auto_currency -%}
             <div id="currencies" style="display: none;">
                 <a class="dropdown-item active " href="#" data-currency="{{ shop.currency }}">
-                    <span class="text">{{ shop.currency }}</span>
+                    <span class="text">
+                      {{ shop.currency }}
+                    </span>
                 </a>
             </div>
 
