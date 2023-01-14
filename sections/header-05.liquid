@@ -90,9 +90,9 @@
                         </div>
                     </div>
 
-                    <div class="header-top--right header__icons text-right clearfix">
+                    <div class="header-top--right header__icons text-right clearfix flex flex-nowrap">
                         {% if section.settings.show_search %}
-                            <details-modal class="header__iconItem header__search">
+                            <details-modal class="header__iconItem header__search flex-shrink">
                                 {%- if settings.show_quick_search -%}
                                     <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}" data-product-to-show="{{ settings.quick_search_to_show }}">
                                 {%- endif -%}
@@ -102,9 +102,9 @@
                                             {% render 'icon-close' %}
                                         </button>
                                         <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-                                            <div class="field relative rounded-lg">
+                                            <div class="field rounded-lg">
                                                 <input 
-                                                    class="w-96 h-12 focus:outline-none focus:ring focus:border-gray-500 rounded-lg search__input field__input form-input-placeholder"
+                                                    class="w-80 h-12 focus:outline-none focus:ring focus:border-gray-500 rounded-lg search__input field__input form-input-placeholder"
                                                     id="Search-In-Modal" 
                                                     type="search" 
                                                     name="q" 
@@ -146,7 +146,7 @@
                         {% endif %}
 
                         {% if section.settings.show_cart or section.settings.show_wishlist or section.settings.show_customer %}
-                        <div class="header__iconItem header__group">
+                        <div class="header__iconItem header__group flex flex-nowrap">
                             {%- if shop.customer_accounts_enabled and section.settings.show_customer -%}
                                 {% if routes.account_login_url contains '/account/login' %}
                                     {% assign is_contained = true %}
